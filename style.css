@@ -1,0 +1,123 @@
+/* Global */
+:root{
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+    --color-black: #4d4d4d;
+    
+    /* Font size */
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+    --font-large: 48px;
+
+    /* Font weight */
+    --weight-semi-bold: 600;
+    --weight-bold: 700;
+    --weight-regular: 400;
+    }
+
+/* Universal tags */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #232323;
+}
+a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Typography */
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0px;
+}
+
+h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--font-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+p {
+    font-size: var(--font-small);
+    font-weight: var(--font-regular);
+    color: var(--color-black);
+    margin: 4px 0;
+}
+
+/* Nav */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    color: var(--color-white);
+    padding: 16px;
+}
+
+.navbar__menu{
+    display: flex;
+}
+
+.navbar__logo{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color:red;
+}
+
+.navbar__logo img{
+    display: inline-block;
+    position: relative;
+    top:6px;
+    text-align: center;
+}
+
+.navbar__menu-item{
+    padding: 8px 12px;
+    margin: 0px 4px;
+    cursor: pointer;
+    
+}
+
+.navbar__menu-item:hover{
+    background-color: var(--color-light-grey);
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.navbar__menu-item.active{
+    border: 1px solid red;
+    border-radius: 4px;
+}
