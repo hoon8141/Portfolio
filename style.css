@@ -129,6 +129,15 @@ button{
     background-color: var(--color-dark-pink);
     border-radius: 4px;
 }
+
+.toggle{
+    position: absolute;
+    color: var(--color-white);
+    top: 18px;
+    right: 32px;
+    font-size: 24px;
+    display: none;
+}
 /* Home */
 #home{
     background: url("/img/background/home-background.png") center/cover no-repeat;
@@ -472,5 +481,44 @@ button{
 
 .contact__right{
     color:var(--color-light-white);
-    font-weight: var(--weight-semi-bold)    ;
+    font-weight: var(--weight-semi-bold);
+}
+
+@media screen and (max-width: 768px){
+    .toggle{
+        display: block;
+
+    }
+    #navbar{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .about__major{
+        flex-direction: column;
+    }
+    
+    .major{
+        margin-bottom: 24px;
+    }
+
+    .skillset{
+        flex-direction: column;
+    }
+    
+    .project{
+        flex-grow: 1;
+    }
+
+    .testimonial__avatar{
+        width: 80px;
+        height: 80px;
+    }
 }
