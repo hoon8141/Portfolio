@@ -29,7 +29,6 @@ navbarMenu.addEventListener('click', (event) =>{
 const homebutton = document.querySelector('.home__button');
 homebutton.addEventListener('click', (event) =>{
     scrollIntoView('#contact');
-    
 });
 
 function scrollIntoView(selector){
