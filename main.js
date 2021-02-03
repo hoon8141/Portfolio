@@ -14,15 +14,25 @@ addEventListener('scroll', () => {
 
 // Handle navbar_menu
 const navbarMenu = navbar.querySelector('.navbar__menu');
-addEventListener('click', (event) =>{
+navbarMenu.addEventListener('click', (event) =>{
     const target = event.target;
     const link = target.dataset.link;
     if(link == null){
         return;
     }
     else{
-        const scrollToId = document.querySelector(link);
-        scrollToId.scrollIntoView({behavior: "smooth"});
-        
+       scrollIntoView(link);
     }
-})
+});
+
+//Handle home button
+const homebutton = document.querySelector('.home__button');
+homebutton.addEventListener('click', (event) =>{
+    scrollIntoView('#contact');
+    
+});
+
+function scrollIntoView(selector){
+    const scrollToId = document.querySelector(selector);
+    scrollToId.scrollIntoView({behavior: "smooth"});
+}
