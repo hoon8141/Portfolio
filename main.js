@@ -3,7 +3,7 @@
 //MAKE NAVBAR
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
-addEventListener('scroll', () => {
+document.addEventListener('scroll', () => {
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--dark');
     }
@@ -36,3 +36,10 @@ function scrollIntoView(selector){
     const scrollToId = document.querySelector(selector);
     scrollToId.scrollIntoView({behavior: "smooth"});
 }
+
+//Transparent Home
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () =>{
+    home.style.opacity = 1 - window.scrollY / homeHeight ;
+});

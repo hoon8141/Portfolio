@@ -153,6 +153,12 @@ button{
     text-align: center;
     padding: 40px;
     padding-top: 80px;
+    
+}
+
+#home.opaceity{
+    opacity: 0.8;
+    transition: all 300ms ease-in-out;
 }
 
 .home__avatar{
