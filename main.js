@@ -58,3 +58,27 @@ document.addEventListener('scroll', ()=>{
 arrowbtn.addEventListener('click', ()=>{
     scrollIntoView('#home');
 });
+
+// projcet fillter
+const workBtnContainer = document.querySelector('.work__categories');
+const projcetContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e)=>{
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter === null){
+        return ;
+    }
+    
+    projcetContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach(project => {   
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            }else{
+                project.classList.add('invisible');
+            }
+        });
+
+        projcetContainer.classList.remove('anim-out');
+    }, 300);
+});
