@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
 });
 
 // Handle navbar_menu
-const navbarMenu = navbar.querySelector('.navbar__menu');
+const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) =>{
     const target = event.target;
     const link = target.dataset.link;
@@ -21,8 +21,15 @@ navbarMenu.addEventListener('click', (event) =>{
         return;
     }
     else{
-       scrollIntoView(link);
+        navbarMenu.classList.remove('open')
+        scrollIntoView(link);
     }
+});
+
+// toggle button
+const toggle = document.querySelector('.toggle');
+toggle.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('open');
 });
 
 //Handle home button
@@ -68,7 +75,13 @@ workBtnContainer.addEventListener('click', (e)=>{
     if(filter === null){
         return ;
     }
-    
+
+    const select = document.querySelector('.categories__btn.selected');
+    select.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
+
     projcetContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach(project => {   
@@ -82,3 +95,4 @@ workBtnContainer.addEventListener('click', (e)=>{
         projcetContainer.classList.remove('anim-out');
     }, 300);
 });
+
