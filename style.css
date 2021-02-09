@@ -127,13 +127,18 @@ button{
     margin: 0px 4px;
     color: var(--color-white);
     cursor: pointer;
-    border: 1px solid transparent;
+}
+
+.navbar__menu-item.active{
+    border-radius: 4px;
+    border: 1px solid var(--color-white);
 }
 
 .navbar__menu-item:hover{
-    border: 1px solid var(--color-white);
+    color: var(--color-white);
     background-color: var(--color-dark-pink);
     border-radius: 4px;
+    
 }
 
 .toggle{
