@@ -151,7 +151,7 @@ button{
 }
 /* Home */
 #home{
-    background: url("/img/background/home-background.png") center/cover no-repeat;
+    background: url("./img/background/home-background.png") center/cover no-repeat;
     text-align: center;
     padding: 40px;
     padding-top: 80px;
